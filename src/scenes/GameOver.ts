@@ -25,11 +25,5 @@ export class GameOver extends Scene
             align: 'center'
         });
         this.gameover_text.setOrigin(0.5);
-
-        this.input.once('pointerdown', () => {
-
-            this.scene.start('MainMenu');
-
-        });
     }
 }

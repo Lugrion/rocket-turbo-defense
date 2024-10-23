@@ -1,35 +1,72 @@
+import { BasicControls } from '../types';
 import { Scene } from 'phaser';
+import Player from '../objects/test-cube';
 
-export class Game extends Scene
-{
+export class Game extends Scene {
     camera: Phaser.Cameras.Scene2D.Camera;
     background: Phaser.GameObjects.Image;
-    msg_text : Phaser.GameObjects.Text;
 
-    constructor ()
-    {
+    cursors: BasicControls | undefined;
+    player: Player
+
+    constructor() {
         super('Game');
+
     }
 
-    create ()
-    {
+    init() {
         this.camera = this.cameras.main;
-        this.camera.setBackgroundColor(0x00ff00);
+        // this.camera.setBackgroundColor(0x00ff00);
 
-        this.background = this.add.image(512, 384, 'background');
-        this.background.setAlpha(0.5);
 
-        this.msg_text = this.add.text(512, 384, 'Make something fun!\nand share it with us:\nsupport@phaser.io', {
-            fontFamily: 'Arial Black', fontSize: 38, color: '#ffffff',
-            stroke: '#000000', strokeThickness: 8,
-            align: 'center'
-        });
-        this.msg_text.setOrigin(0.5);
+        
+        this.background = this.add.image(this.camera.width / 2, this.camera.height / 2, 'background');
+        // this.background.setAlpha(0.5);
 
-        this.input.once('pointerdown', () => {
+    }
 
-            this.scene.start('GameOver');
+    create() {
 
-        });
+        this.cursors = this.input.keyboard?.createCursorKeys();
+
+        this.player = new Player({
+            current_scene: this,
+            x: this.camera.width / 2,
+            y: this.camera.height / 2,
+            texture: "block"
+        })
+    }
+
+    setupPhysics() {
+
+    }
+
+    basicPlayerMovement() {
+
+        this.player.setVelocity(0);
+
+        if (this.cursors) {
+
+
+            if (this.cursors.left.isDown) {
+                this.player.setVelocityX(-300);
+            }
+            else if (this.cursors.right.isDown) {
+                this.player.setVelocityX(300);
+            }
+
+            if (this.cursors.up.isDown) {
+                this.player.setVelocityY(-300);
+            }
+            else if (this.cursors.down.isDown) {
+                this.player.setVelocityY(300);
+            }
+
+
+        }
+    }
+
+    update(time: number, delta: number): void {
+        this.basicPlayerMovement()
     }
 }
