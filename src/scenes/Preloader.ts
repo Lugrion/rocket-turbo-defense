@@ -32,6 +32,18 @@ export class Preloader extends Scene
         //  Load the assets for the game - Replace with your own assets
         this.load.setPath('assets');
         this.load.image('background', 'bg.png');
+        // this.load.image('planet', 'bg-planet.png');
+        
+        // this.load.spritesheet({
+        //     key: 'planet',
+        //     url: 'bg-planet.png',
+        //     frameConfig: {
+        //         frameWidth: 5000,
+        //         frameHeight: 5000,
+        //         startFrame: 0,
+        //         endFrame: 8
+        //     }
+        // });
     }
 
     create ()
