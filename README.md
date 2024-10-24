@@ -14,6 +14,7 @@ https://www.leshylabs.com/apps/sstool/
 
 To-Do:
 
+-Prevent from moving upwards when resizing screen using the click option
 -Add torrets that launch bullets that follow you.
 -Add wave system
 -Displacing effects
