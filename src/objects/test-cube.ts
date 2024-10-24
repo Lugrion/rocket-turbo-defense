@@ -11,26 +11,6 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.setupPhysics();
     }
 
-    init() {
-
-
-
-    }
-
-    update() {
-        console.log("XD")
-        this.basicMovement();
-    }
-
-    createControls() {
-        
-    }
-
-    basicMovement() {
-        
-
-    }
-
     setupPhysics() {
 
         // Add the player to the scene

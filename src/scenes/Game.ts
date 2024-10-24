@@ -21,8 +21,28 @@ export class Game extends Scene {
         this.background = this.add.image(this.camera.width / 2, this.camera.height / 2, 'background');
         // this.background.setAlpha(0.5);
 
-        // this.add.image(this.camera.width / 2, this.camera.height / 2, 'planet');
+        this.planetAnimation();
 
+    }
+
+    
+
+    planetAnimation() {
+        this.anims.create({
+            key: 'spin',
+            frames: this.anims.generateFrameNames('planet', {
+                start: 1,
+                end: 50,
+                prefix: 'sprite',
+                zeroPad: 0
+            }),
+            frameRate: 12,
+            repeat: -1
+        });
+
+        let planet = this.add.sprite(this.camera.width / 2, this.camera.height / 2, 'planet');
+        planet.setScale(1.5)
+        planet.play('spin')
     }
 
     create() {
@@ -30,22 +50,20 @@ export class Game extends Scene {
         this.addFullScreenOption()
     }
 
-    addFullScreenOption(){
+    addFullScreenOption() {
         const button = this.add.image(this.camera.width - 16, 16, '', 0).setOrigin(1, 0).setInteractive();
 
         button.on('pointerup', () => {
-            if (this.scale.isFullscreen)
-                {
-                    button.setFrame(0);
-    
-                    this.scale.stopFullscreen();
-                }
-                else
-                {
-                    button.setFrame(1);
-    
-                    this.scale.startFullscreen();
-                }
+            if (this.scale.isFullscreen) {
+                button.setFrame(0);
+
+                this.scale.stopFullscreen();
+            }
+            else {
+                button.setFrame(1);
+
+                this.scale.startFullscreen();
+            }
         })
 
         const FKey = this.input.keyboard?.addKey('F');
@@ -71,18 +89,49 @@ export class Game extends Scene {
             current_scene: this,
             x: this.camera.width / 8,
             y: this.camera.height / 2,
-            texture: "block"
+            texture: "astro"
         })
+
+
+        this.player.anims.create({
+            key: 'fall',
+            frames: this.anims.generateFrameNames('astro', {
+                start: 1,
+                end: 4,
+                prefix: 'astronaut',
+                zeroPad: 0
+            }),
+            frameRate: 24,
+            repeat: 0
+        });
+
+        this.player.anims.create({
+            key: 'fly',
+            frames: this.anims.generateFrameNames('astro', {
+                start: 4,
+                end: 1,
+                prefix: 'astronaut',
+                zeroPad: 0
+            }),
+            frameRate: 24,
+            repeat: 0
+        });
+
+        this.player.setScale(6)
+
+        // this.player.setGravityY(1499)
 
         this.input.on('pointerdown', () => {
 
             this.isHolding = true
+            this.player.anims.play("fly")
 
         });
 
         this.input.on('pointerup', () => {
 
             this.isHolding = false
+            this.player.anims.play("fall")
 
         });
     }
@@ -90,7 +139,7 @@ export class Game extends Scene {
     basicPlayerMovement() {
         if (this.isHolding) {
             console.log("Holding")
-            this.player.setVelocityY(-500)
+            this.player.setVelocityY(-300)
         } else {
             this.player.setVelocityY(300)
             console.log("NOT Holding")
