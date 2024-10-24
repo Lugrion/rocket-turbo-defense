@@ -1,14 +1,20 @@
 import { SpriteBasicConfig } from "../types"
 
-export default class Player extends Phaser.Physics.Arcade.Sprite {
+export default class Illusion extends Phaser.Physics.Arcade.Sprite {
 
     constructor(
         spriteConfig: SpriteBasicConfig
     ) {
         super(spriteConfig.current_scene, spriteConfig.x, spriteConfig.y, spriteConfig.texture);
 
-
         this.setupPhysics();
+    }
+
+    init() {
+
+        // Make sure to dispose of the rockets once they have traversed the screen
+
+        
     }
 
     setupPhysics() {
@@ -21,6 +27,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         // Prevent body from traversing off edges
         this.setCollideWorldBounds(true);
+
+        this.setImmovable()
     }
 
 }

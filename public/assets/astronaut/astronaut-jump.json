@@ -1,0 +1,94 @@
+{
+    "frames": {
+        "astro1": {
+            "frame": {
+                "x": 6,
+                "y": 4,
+                "w": 13,
+                "h": 16
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 13,
+                "h": 16
+            },
+            "sourceSize": {
+                "w": 13,
+                "h": 16
+            }
+        },
+        "astro2": {
+            "frame": {
+                "x": 30,
+                "y": 4,
+                "w": 13,
+                "h": 15
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 13,
+                "h": 15
+            },
+            "sourceSize": {
+                "w": 13,
+                "h": 15
+            }
+        },
+        "astro3": {
+            "frame": {
+                "x": 54,
+                "y": 4,
+                "w": 13,
+                "h": 15
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 13,
+                "h": 15
+            },
+            "sourceSize": {
+                "w": 13,
+                "h": 15
+            }
+        },
+        "astro4": {
+            "frame": {
+                "x": 78,
+                "y": 4,
+                "w": 13,
+                "h": 16
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 13,
+                "h": 16
+            },
+            "sourceSize": {
+                "w": 13,
+                "h": 16
+            }
+        }
+    },
+    "meta": {
+        "app": "https://www.leshylabs.com/apps/sstool/",
+        "version": "Leshy SpriteSheet Tool v0.8.4",
+        "image": "astro.png",
+        "size": {
+            "w": 120,
+            "h": 24
+        },
+        "scale": 1
+    }
+}

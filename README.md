@@ -7,3 +7,6 @@ https://deep-fold.itch.io/pixel-planet-generator
 
 Screaming Brain Studios - Space Background
 https://screamingbrainstudios.itch.io/seamless-space-backgrounds
+
+Leshy Labs - Spritesheet Tool
+https://www.leshylabs.com/apps/sstool/

@@ -32,8 +32,23 @@ export class Preloader extends Scene
         //  Load the assets for the game - Replace with your own assets
         this.load.setPath('assets');
         this.load.image('background', 'bg.png');
+        this.load.image('rocket', 'rocket.png');
+
+        // this.load.image('on-fullscreen', 'ui/on-fullscreen.png');
+        // this.load.image('off-fullscreen', 'ui/off-fullscreen.png');
+
+        this.load.spritesheet('fullscreen', 'ui/fullscreen.png', { frameWidth: 200, frameHeight: 200 });
+
         this.load.atlas('planet', 'bg-planet.png', 'bg-planet.json');
-        this.load.atlas('astro', 'astronaut.png', 'astronaut.json');
+
+        this.load.setPath('assets/astronaut');
+        this.load.atlas('astro-j', 'astronaut-jump.png', 'astronaut-jump.json');
+        this.load.atlas('astro-r', 'astronaut-run.png', 'astronaut-run.json');
+
+        this.add.graphics().fillStyle(1,0).fillRect(0, 0, 800, 60).generateTexture('illusion', 800, 60).destroy();
+
+        
+
     }
 
     create ()

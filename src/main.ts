@@ -1,5 +1,5 @@
 import { Boot } from './scenes/Boot';
-import { Game as MainGame } from './scenes/Game';
+import { MainRunner } from './scenes/MainRunner';
 import { GameOver } from './scenes/GameOver';
 import { MainMenu } from './scenes/MainMenu';
 import { Preloader } from './scenes/Preloader';
@@ -23,7 +23,7 @@ const config: Types.Core.GameConfig = {
         Boot,
         Preloader,
         MainMenu,
-        MainGame,
+        MainRunner,
         GameOver
     ],
     physics: {
@@ -33,7 +33,7 @@ const config: Types.Core.GameConfig = {
                 y: 0,
                 x: 0
             },
-            debug: true
+            debug: false
         }
     }
 };
