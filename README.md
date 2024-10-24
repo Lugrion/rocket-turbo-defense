@@ -23,19 +23,3 @@ Welcome to the **Jetpack Joyride-like Game!** Experience thrilling gameplay as y
 
 - **Leshy Labs** - Spritesheet Tool  
   [Leshy Spritesheet Tool](https://www.leshylabs.com/apps/sstool/)
-
-## Features
-- Dynamic background animations for immersive gameplay.
-- Smooth character controls and physics using PhaserJS.
-- Engaging sound effects and music to enhance the gaming experience.
-- Variety of enemies and obstacles to overcome.
-- Intuitive UI for seamless navigation.
-
-## Installation
-
-To run the game locally, follow these steps:
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/Lugrion/rocket-turbo-defense.git
-   ```
