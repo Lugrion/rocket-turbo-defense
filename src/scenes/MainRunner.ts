@@ -1,6 +1,6 @@
 import { Scene } from 'phaser';
 import Player from '../objects/astronaut';
-import Generator from '../objects/generator';
+import Generator from '../objects/ObsGenerator';
 import Illusion from '../objects/illusion-layer';
 
 export class MainRunner extends Scene {

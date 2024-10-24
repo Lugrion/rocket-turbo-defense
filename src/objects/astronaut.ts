@@ -101,7 +101,5 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
     update(): void {
         this.basicMovement();
-
-        
     }
 }
