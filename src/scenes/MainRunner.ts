@@ -31,12 +31,13 @@ export class MainRunner extends Scene {
     constructor() {
         super('Game');
 
-        this.hitObstacle = false;
-        this.score = 0;
-
     }
 
     init() {
+
+        this.hitObstacle = false;
+        this.score = 0;
+
         this.camera = this.cameras.main;
         // this.camera.setBackgroundColor(0x00ff00);
 
