@@ -1,20 +1,41 @@
-# Jetpack Joyride-like Game :-D
+# Jetpack Joyride-like Game 🚀
 
-Credits:
+Welcome to the **Jetpack Joyride-like Game!** Experience thrilling gameplay as you navigate through a dynamic world filled with challenges and excitement. This project is inspired by the classic Jetpack Joyride and aims to deliver an engaging experience with unique mechanics and stunning visuals.
 
-Deep-Fold - Background Planet Animation
-https://deep-fold.itch.io/pixel-planet-generator
+## Table of Contents
+- [Credits](#credits)
+- [Features](#features)
+- [Installation](#installation)
+- [Gameplay](#gameplay)
+- [To-Do](#to-do)
+- [License](#license)
 
-Screaming Brain Studios - Space Background
-https://screamingbrainstudios.itch.io/seamless-space-backgrounds
+## Credits
 
-Leshy Labs - Spritesheet Tool
-https://www.leshylabs.com/apps/sstool/
+- **Deep-Fold** - Background Planet Animation  
+  [Pixel Planet Generator](https://deep-fold.itch.io/pixel-planet-generator)
 
+- **Screaming Brain Studios** - Space Background  
+  [Seamless Space Backgrounds](https://screamingbrainstudios.itch.io/seamless-space-backgrounds)
 
-To-Do:
+- **Matt Walkden** - Astronaut Sprite + Rocket  
+  [Free Space Runner Pack](https://mattwalkden.itch.io/free-space-runner-pack)
 
--Prevent from moving upwards when resizing screen using the click option
--Add torrets that launch bullets that follow you.
--Add wave system
--Displacing effects
+- **Leshy Labs** - Spritesheet Tool  
+  [Leshy Spritesheet Tool](https://www.leshylabs.com/apps/sstool/)
+
+## Features
+- Dynamic background animations for immersive gameplay.
+- Smooth character controls and physics using PhaserJS.
+- Engaging sound effects and music to enhance the gaming experience.
+- Variety of enemies and obstacles to overcome.
+- Intuitive UI for seamless navigation.
+
+## Installation
+
+To run the game locally, follow these steps:
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/Lugrion/rocket-turbo-defense.git
+   ```
