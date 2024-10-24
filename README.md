@@ -4,11 +4,6 @@ Welcome to the **Jetpack Joyride-like Game!** Experience thrilling gameplay as y
 
 ## Table of Contents
 - [Credits](#credits)
-- [Features](#features)
-- [Installation](#installation)
-- [Gameplay](#gameplay)
-- [To-Do](#to-do)
-- [License](#license)
 
 ## Credits
 
