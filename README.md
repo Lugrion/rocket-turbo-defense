@@ -10,3 +10,10 @@ https://screamingbrainstudios.itch.io/seamless-space-backgrounds
 
 Leshy Labs - Spritesheet Tool
 https://www.leshylabs.com/apps/sstool/
+
+
+To-Do:
+
+-Add torrets that launch bullets that follow you.
+-Add wave system
+-Displacing effects
